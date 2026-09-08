@@ -1,3 +1,3 @@
 
-![デモ](docs/demo.gif)
+![デモ](docs/dem.gif)
 # Fractalガチャ  After Effects用スクリプトです。  ## 機能 - コントラストランダム変更 - 明るさランダム変更 - サブ影響ランダム変更 - 複雑度ランダム変更  ## 配布 BOOTHで配布中
