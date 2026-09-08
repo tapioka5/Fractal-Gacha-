@@ -16,8 +16,8 @@ After Effects のフラクタルノイズを、ランダム生成で何度でも
 
 | 項目 | 内容 |
 | --- | --- |
-| After Effects | 【CC 2020 以降など、動作確認したバージョン】 |
-| OS | Windows 10 / 11、macOS 【バージョン】 |
+| After Effects | CC 2025 / 2026 |
+| OS | Windows 11（macOS は未検証） |
 
 ## インストール
 
@@ -39,11 +39,7 @@ After Effects のフラクタルノイズを、ランダム生成で何度でも
 1. フラクタルノイズを適用したいレイヤーを選択します。
 2. 「ガチャを回す」ボタンを押します。
 3. 結果が気に入らなければ、そのまま押し直します。
-
-【手順ごとのスクショがあれば、各行の下に `![手順1](docs/usage-1.png)` を追加】
-
----
-
+4. sssss
 ## 実装のポイント
 
 ### Undo グループを try/finally で保護
@@ -87,18 +83,6 @@ ExtendScript は ECMAScript 3 相当の実行環境で、`let` / `const` やア�
 
 ---
 
-## ディレクトリ構成
-
-```
-.
-├── src/
-│   └── フラクタルガチャ.jsx
-├── docs/
-│   ├── demo.gif
-│   └── panel.png
-└── README.md
-```
-
 ## 今後の課題
 
 - 【既知の不具合、未実装のまま残していること】
@@ -106,7 +90,7 @@ ExtendScript は ECMAScript 3 相当の実行環境で、`let` / `const` やア�
 
 ## 配布先
 
-BOOTH で配布しています: 【BOOTHのURL】
+BOOTH で配布しています: https://tapioka-1145.booth.pm/items/8585413
 
 ## ライセンス
 
