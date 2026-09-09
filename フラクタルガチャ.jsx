@@ -26,21 +26,23 @@
         var rangeGroup = group.add("group");
         rangeGroup.orientation = "row";
 
+        // ラベルから「：」を除去した名前
+        var name = labelText.replace("：", "");
+
         // 入力ボックス
         var min = rangeGroup.add("edittext", undefined, minVal);
         min.preferredSize.width = 40;
+        min.helpTip = name + "の下限値";
+
         var max = rangeGroup.add("edittext", undefined, maxVal);
         max.preferredSize.width = 40;
+        max.helpTip = name + "の上限値";
 
         // チェックボックス
         var checkbox = rangeGroup.add("checkbox", undefined);
         checkbox.preferredSize.width = 20;
 
-        return {
-            min: min,
-            max: max,
-            checkbox: checkbox,
-        };
+        return { min: min, max: max, checkbox: checkbox };
     }
 
     // =========================
@@ -128,14 +130,14 @@
             //処理
             // =========================
             //数値取得
-            var contrastMin = Math.round(contrast.min.text);
-            var contrastMax = Math.round(contrast.max.text);
-            var brightnessMin = Math.round(brightness.min.text);
-            var brightnessMax = Math.round(brightness.max.text);
-            var subInfluenceMin = Math.round(subInfluence.min.text);
-            var subInfluenceMax = Math.round(subInfluence.max.text);
-            var complexityMin = Math.round(complexity.min.text);
-            var complexityMax = Math.round(complexity.max.text);
+            var contrastMin = Math.round(Number(contrast.min.text));
+            var contrastMax = Math.round(Number(contrast.max.text));
+            var brightnessMin = Math.round(Number(brightness.min.text));
+            var brightnessMax = Math.round(Number(brightness.max.text));
+            var subInfluenceMin = Math.round(Number(subInfluence.min.text));
+            var subInfluenceMax = Math.round(Number(subInfluence.max.text));
+            var complexityMin = Math.round(Number(complexity.min.text));
+            var complexityMax = Math.round(Number(complexity.max.text));
 
             var cVal = Math.floor(Math.random() * (contrastMax - contrastMin + 1)) + contrastMin;
             var bVal = Math.floor(Math.random() * (brightnessMax - brightnessMin + 1)) + brightnessMin;
