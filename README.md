@@ -23,7 +23,6 @@ After Effects のフラクタルノイズを、ランダム生成で何度でも
 1. `フラクタルガチャ.jsx` をダウンロードします。
 2. 下記のフォルダに配置します。
    - Windows: `C:\Program Files\Adobe\Adobe After Effects <version>\Support Files\Scripts\ScriptUI Panels`
-   - macOS: `/Applications/Adobe After Effects <version>/Scripts/ScriptUI Panels`
 3. After Effects を再起動します。
 4. `ウィンドウ` メニューの一覧に `フラクタルガチャ.jsx` が追加されます。
 
@@ -38,6 +37,7 @@ After Effects のフラクタルノイズを、ランダム生成で何度でも
 3. 各プロパティの下限・上限を設定します（左が下限、右が上限。未設定の場合は既定値）。
 4. 「ガチャ」ボタンを押します。
 5. 結果が気に入らなければ、そのまま押し直します。
+---
 ## 実装のポイント
 
 ### Undo グループを try/finally で保護
@@ -50,9 +50,9 @@ After Effects のフラクタルノイズを、ランダム生成で何度でも
 ```javascript
 app.beginUndoGroup("フラクタルガチャ");
 try {
-  applyRandomParameters(layer);
+    // エフェクトの取得・追加、値の適用
 } finally {
-  app.endUndoGroup();
+    app.endUndoGroup();
 }
 ```
 
